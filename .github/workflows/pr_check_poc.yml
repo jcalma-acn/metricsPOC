@@ -25,4 +25,12 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
+      
+      - name: Sleep for 5mins
+        uses: juliangruber/sleep-action@v1
+        with:
+        time: 300s
+       
+      - name: Fail build
+        run: exit 1
             
